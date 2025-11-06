@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "Test math problem solving",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "question": "Решите уравнение 2x + 3 = 13",
+        "subject": "Математика"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "answer": "string",
+        "steps": "array",
+        "subject": "Математика"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test OPTIONS for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": "",
+      "bodyMatcher": "exact"
+    }
+  ]
+}
