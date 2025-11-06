@@ -283,8 +283,26 @@ const Index = () => {
           </div>
         </div>
 
-        <footer className="mt-16 text-center text-muted-foreground">
-          <div className="flex items-center justify-center gap-2 text-sm">
+        <footer className="mt-16 text-center">
+          <Card className="p-6 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 border-2">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <Icon name="MessageCircle" className="text-primary" size={32} />
+                <div className="text-left">
+                  <h3 className="font-semibold text-lg">Нужен универсальный ответ?</h3>
+                  <p className="text-sm text-muted-foreground">Задайте любой вопрос в нашем чате</p>
+                </div>
+              </div>
+              <a href="/chat">
+                <Button size="lg" className="gap-2">
+                  <Icon name="Zap" size={20} />
+                  Открыть чат
+                  <Icon name="ArrowRight" size={16} />
+                </Button>
+              </a>
+            </div>
+          </Card>
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mt-6">
             <Icon name="Sparkles" size={16} />
             <p>Создано с использованием искусственного интеллекта</p>
           </div>
